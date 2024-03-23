@@ -21,10 +21,27 @@ function upravJmeno(upraveneJmeno){
 
     for (let i = upraveneJmeno.length-1; i >=0 ; i--){
         console.log(upraveneJmeno[i]);
+        
+
+        if (upraveneJmeno[i] == " "){
+            //upraveneJmeno[i+1] = upraveneJmeno[i+1].toUpperCase();
+            //upraveneJmeno[i+1] = uppercase(upravJmeno[i+1]);
+            
+            
+        }
+        
     }
+    
+
+    return upraveneJmeno;
+}
+
+function uppercase(pismeno){
+    return pismeno.toUpperCase();
 }
 
 //START:
 
 let jmenoUzivatele = vstup();
-upravJmeno(jmenoUzivatele);
+jmenoUzivatele=upravJmeno(jmenoUzivatele);
+console.log(jmenoUzivatele);
