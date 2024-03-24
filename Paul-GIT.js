@@ -22,7 +22,7 @@ function upravJmeno(upravovaneJmeno){
     let mezery = 0; //do promenne se bude zaznamenavat pocet zdvojenych mezer
     let upraveneJmeno = upravovaneJmeno[0].toUpperCase();
     //cyklus prepise jmeno do nove promenne a pritom bude provadet zmeny - provadet zmeny v existujicim stringu neni mozne (alespon ne tak snadno, jak jsem si puvodne myslel)
-    //pro naplneni nove promenne je pouzita funkce padEnd() ktera jmeno zreplikuje z jednotlivych pismen
+    //pro prepsani jmena do nove promenne je pouzita funkce padEnd() ktera jmeno zreplikuje z jednotlivych pismen
     
     for (let i = 1; i < upravovaneJmeno.length; i++){
         
@@ -42,8 +42,11 @@ function upravJmeno(upravovaneJmeno){
         }             
     }
     
-
     return upraveneJmeno;
+}
+
+function pozdrav(finalniJmeno){
+    alert("Ahoj " + finalniJmeno);
 }
 
 
@@ -53,3 +56,4 @@ function upravJmeno(upravovaneJmeno){
 let jmenoUzivatele = vstup();
 jmenoUzivatele=upravJmeno(jmenoUzivatele);
 console.log(jmenoUzivatele);
+pozdrav(jmenoUzivatele);
